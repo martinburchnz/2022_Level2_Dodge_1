@@ -89,6 +89,24 @@ namespace _2022_Level2_Dodge_1
 
         }
 
+        private void MnuStart_Click(object sender, EventArgs e)
+        {
+            score = 0;
+            LblScore.Text = score.ToString();
+            // pass lives from LblLives Text property to lives variable
+            lives = int.Parse(LblLives.Text);
+
+            TmrPlanet.Enabled = true;
+            TmrShip.Enabled = true;
+        }
+
+        private void MnuStop_Click(object sender, EventArgs e)
+        {
+            TmrShip.Enabled = false;
+            TmrPlanet.Enabled = false;
+
+        }
+
         private void CheckLives()
         {
             if (lives == 0)
