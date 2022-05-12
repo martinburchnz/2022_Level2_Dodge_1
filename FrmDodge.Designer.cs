@@ -33,14 +33,22 @@ namespace _2022_Level2_Dodge_1
             this.PnlGame = new System.Windows.Forms.Panel();
             this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LblScore = new System.Windows.Forms.Label();
+            this.LblLives = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PnlGame
             // 
             this.PnlGame.BackColor = System.Drawing.Color.Silver;
-            this.PnlGame.Location = new System.Drawing.Point(6, 63);
+            this.PnlGame.Location = new System.Drawing.Point(9, 97);
+            this.PnlGame.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(500, 400);
+            this.PnlGame.Size = new System.Drawing.Size(750, 615);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
@@ -55,19 +63,96 @@ namespace _2022_Level2_Dodge_1
             this.TmrShip.Interval = 50;
             this.TmrShip.Tick += new System.EventHandler(this.TmrShip_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(266, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Planet Dodge";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(828, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Name";
+            // 
+            // TxtName
+            // 
+            this.TxtName.Location = new System.Drawing.Point(833, 162);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(100, 26);
+            this.TxtName.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(828, 271);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Score";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(828, 457);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 29);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Lives";
+            // 
+            // LblScore
+            // 
+            this.LblScore.AutoSize = true;
+            this.LblScore.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblScore.Location = new System.Drawing.Point(833, 341);
+            this.LblScore.Name = "LblScore";
+            this.LblScore.Size = new System.Drawing.Size(26, 29);
+            this.LblScore.TabIndex = 6;
+            this.LblScore.Text = "0";
+            // 
+            // LblLives
+            // 
+            this.LblLives.AutoSize = true;
+            this.LblLives.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLives.Location = new System.Drawing.Point(833, 528);
+            this.LblLives.Name = "LblLives";
+            this.LblLives.Size = new System.Drawing.Size(26, 29);
+            this.LblLives.TabIndex = 3;
+            this.LblLives.Text = "3";
+            // 
             // FrmDodge
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 461);
+            this.ClientSize = new System.Drawing.Size(951, 709);
+            this.Controls.Add(this.LblLives);
+            this.Controls.Add(this.LblScore);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TxtName);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PnlGame);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDodge";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodge";
+            this.Load += new System.EventHandler(this.FrmDodge_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -76,6 +161,13 @@ namespace _2022_Level2_Dodge_1
         private System.Windows.Forms.Panel PnlGame;
         private System.Windows.Forms.Timer TmrPlanet;
         private System.Windows.Forms.Timer TmrShip;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LblScore;
+        private System.Windows.Forms.Label LblLives;
     }
 }
 
